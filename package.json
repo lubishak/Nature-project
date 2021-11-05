@@ -1,0 +1,15 @@
+{
+  "name": "natoure",
+  "version": "1.0.0",
+  "description": "natoure landing page",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp-sass": "^5.0.0"
+  },
+  "scripts": {
+    "test": "noutres"
+  },
+  "author": "",
+  "license": "ISC"
+}

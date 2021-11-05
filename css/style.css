@@ -1,0 +1,190 @@
+/* colors:
+
+ligth green: #7cd56f
+medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 40rem;
+    font-family: sans-serif;
+    line-height: 1.7;
+    color:#777;
+    padding: 1.5rem;
+}
+
+.header {
+    height: 95vh;
+    background: linear-gradient(to right bottom, hsl(111, 55%, 44%), hsl(160, 64%, 43%)), url(../images/pexels-keegan-checks-9730025.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0px,100% 75vh,0 100%);
+    position: relative;
+}
+
+.header__logo{
+    height:3rem;
+    width:3rem;
+}
+
+.header__logo_box{
+    padding: 2rem;
+}
+
+
+.header__text_box{
+    color: white;
+    position: absolute;
+    bottom: 60%;
+    right: 34%;
+    translate: (-50%, -50%);
+    backface-visibility: hidden;
+}
+
+.primary_text__main{
+    letter-spacing: 2.5rem;
+    font-size:5rem;
+    font-weight: 20rem;
+    display: block;
+
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+
+}
+
+.secondary_text__sub{
+    letter-spacing: .88rem;
+    display: block;
+    font-size: 1.67rem;
+    text-transform: uppercase;
+
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+ 
+}
+
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80%{
+        transform: translateX(1rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80%{
+        transform: translateX(-1rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+.btn:link,
+.btn:visited{
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    border-radius: 10rem;
+    transition: all 1s;
+    position: relative;
+}
+
+.btn:hover{
+    transform: translateY(-3px);
+    background-color: #ccb6ae;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+}
+
+.btn:active{
+    transform: translateY(-1px );
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+}
+
+.btn_white{
+    background-color: #fff;
+    color: #777;
+    font-size: 1rem;
+}
+
+.header__btn_box{
+    position: absolute;
+    bottom: 50%;
+    right: 45%;
+    translate: (-50%, -50%);
+}
+
+.btn:after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn_white::after{
+    background-color: #fff;
+}
+
+.btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated{
+    animation: moveInBottom  .4s ease-out .75s;
+    animation-fill-mode: backwards;
+}
